@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>رجالي</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="css/main.css">
+  <script src="https://kit.fontawesome.com/50184d973e.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <header>
+    <div class="fixed-top bg-white py-3">
+      <div class="container w-100">
+        <div class="d-flex align-items-center justify-content-between">
+          <a class="navbar-brand" href="index.html">
+            <img src="images/brand.png" alt="" class="img-brand">
+          </a>
+          <div class="d-none d-md-block">
+            <div class="input-group">
+              <span class="input-group-text rounded-0 rounded-end" id="basic-addon1">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </span>
+              <input type="text" class="form-control form-control-sm rounded-0 rounded-start"
+                placeholder="ادخل كلمة البحث" aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+          </div>
+          <div class="d-flex align-items-center">
+            <button type="button" class="btn btn-sm btn-outline-warning d-none d-lg-block">ريال سعودي</button>
+            <span class="pe-3">
+              <i class="fa-solid fa-cart-shopping fs-6"></i>
+            </span>
+            <span class="pe-3">
+              <i class="fa-regular fa-user fs-6"></i>
+            </span>
+            <button class="navbar-toggler pe-3 d-block d-lg-none" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+              aria-label="Toggle navigation">
+              <i class="fa-solid fa-bars fs-6"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav class="navbar navbar-expand-lg border mt-5">
+      <div class="container">
+        <div class="collapse navbar-collapse pt-3" id="navbarSupportedContent">
+          <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+            <li class="nav-item ps-3">
+              <a class="nav-link fw-bold" aria-current="page" href="#">أطفال</a>
+            </li>
+            <li class="nav-item ps-3">
+              <a class="nav-link fw-bold" aria-current="page" href="category.html">رجالي</a>
+            </li>
+            <li class="nav-item ps-3">
+              <a class="nav-link fw-bold" aria-current="page" href="#">جاكيتات</a>
+            </li>
+            <li class="nav-item ps-3">
+              <a class="nav-link fw-bold" aria-current="page" href="#">أكسسوارات</a>
+            </li>
+            <li class="nav-item ps-4">
+              <a class="nav-link fw-bold" aria-current="page" href="#">أحذية</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link fw-bold dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                نسائي
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">عبايات</a></li>
+                <li><a class="dropdown-item" href="#">فساتين</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container px-3 mb-5">
+
+      <div class="row py-5">
+        <div class="col-md-3 mb-4">
+          <button class="btn btn-outline-secondary d-md-none mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#filtersCollapse" aria-expanded="false" aria-controls="filtersCollapse">
+            <i class="fas fa-filter me-2"></i>الفلاتر
+          </button>
+          <div class="collapse d-md-block" id="filtersCollapse">
+            <div class="card mb-3">
+              <div class="card-header" data-bs-toggle="collapse" data-bs-target="#categoryCollapse" aria-expanded="true">
+                فئات المنتجات
+                <i class="fas fa-chevron-down float-start"></i>
+              </div>
+              <div class="collapse show" id="categoryCollapse">
+                <div class="card-body">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="category" id="category1" checked>
+                    <label class="form-check-label" for="category1">
+                      رجالي
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card mb-3">
+              <div class="card-header" data-bs-toggle="collapse" data-bs-target="#priceCollapse" aria-expanded="true">
+                السعر
+                <i class="fas fa-chevron-down float-start"></i>
+              </div>
+              <div class="collapse show" id="priceCollapse">
+                <div class="card-body">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="price" id="price1">
+                    <label class="form-check-label" for="price1">
+                      أقل من ١٠٠ ر.س
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="price" id="price2">
+                    <label class="form-check-label" for="price2">
+                      ١٠٠ ر.س إلى ٢٠٠ ر.س
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="price" id="price3">
+                    <label class="form-check-label" for="price3">
+                      ٢٠٠ ر.س إلى ٣٠٠ ر.س
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="price" id="price4">
+                    <label class="form-check-label" for="price4">
+                      أكثر من ٣٠٠ ر.س
+                    </label>
+                  </div>
+                  <div class="mt-3">
+                    <div class="input-group mb-3">
+                      <span class="input-group-text rounded-0 rounded-end">ر.س</span>
+                      <input type="number" class="form-control form-control-sm rounded-0 rounded-start" placeholder="من" aria-label="من">
+                    </div>
+                    <div class="input-group mb-3">
+                      <span class="input-group-text rounded-0 rounded-end">ر.س</span>
+                      <input type="number" class="form-control form-control-sm rounded-0 rounded-start" placeholder="إلى" aria-label="إلى">
+                    </div>
+                    <button class="btn btn-outline-secondary" type="button">
+                      <i class="fas fa-arrow-left"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="btn btn-outline-secondary w-100">مسح الفلاتر</button>
+          </div>
+        </div>
+        <div class="col-md-9">
+          <div class="d-flex justify-content-between align-items-center mb-4">
+            <h1 class="h4 mb-0">رجالي - <span>12</span> منتج</h1>
+            <div class="d-flex align-items-center">
+              <label class="ms-2 d-none d-sm-block" for="sortSelect">ترتيب</label>
+              <select class="form-select" id="sortSelect">
+                <option value="ourSuggest">مقترحاتنا</option>
+                <option value="bestSell">الاكثر مبيعاً</option>
+                <option value="topRated">الاعلى تقييماً</option>
+                <option value="priceFromTopToLow">السعر من الاعلى إلى الاقل</option>
+                <option value="priceFromLowToTop">السعر من الاقل إلى الاعلى</option>
+              </select>
+            </div>
+          </div>
+          <div class="row g-4 products" id="productsContainer">
+            <div class="col-6 col-lg-4">
+              <div class="product border p-3">
+                <div class="product-img">
+                  <img src="images/products/1.jpg" class="img-fluid object-fit-cover" alt="">
+                </div>
+                <div class="py-3 text-center">
+                  <button class="btn btn-warning px-4 px-xlg-5">إضافة للسلة</button>
+                  <button class="btn btn-light">
+                    <i class="fa-solid fa-heart"></i>
+                  </button>
+                </div>
+                <div class="text-center">
+                  <h6>جاكيت بغطاء للرأس للرجال</h6>
+                  <p>٤٥٨٫٨٥ ر.س</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-lg-4">
+              <div class="product border p-3">
+                <div class="product-img">
+                  <img src="images/products/2.jpg" class="img-fluid object-fit-cover" style="width: 100%;" alt="">
+                </div>
+                <div class="py-3 text-center">
+                  <button class="btn btn-warning px-4 px-xlg-5">إضافة للسلة</button>
+                  <button class="btn btn-light">
+                    <i class="fa-solid fa-heart"></i>
+                  </button>
+                </div>
+                <div class="text-center">
+                  <h6>جاكيت منتفخة خفيفة الوزن للرجال</h6>
+                  <p>٤٥٨٫٨٥ ر.س</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-lg-4">
+              <div class="product border p-3">
+                <div class="product-img">
+                  <img src="images/products/3.jpg" class="img-fluid object-fit-cover" style="width: 100%; height: 100%;" alt="">
+                </div>
+                <div class="py-3 text-center">
+                  <button class="btn btn-warning px-4 px-xlg-5">إضافة للسلة</button>
+                  <button class="btn btn-light">
+                    <i class="fa-solid fa-heart"></i>
+                  </button>
+                </div>
+                <div class="text-center">
+                  <h6>جاكيت بسحاب أمامي للرجال</h6>
+                  <p>٣٩٥٫٦٠ ر.س</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-lg-4">
+              <div class="product border p-3">
+                <div class="product-img">
+                  <img src="images/products/4.jpg" class="img-fluid object-fit-cover" style="width: 100%;" alt="">
+                </div>
+                <div class="py-3 text-center">
+                  <button class="btn btn-warning px-4 px-xlg-5">إضافة للسلة</button>
+                  <button class="btn btn-light">
+                    <i class="fa-solid fa-heart"></i>
+                  </button>
+                </div>
+                <div class="text-center">
+                  <h6>تي شيرت رجالي بأكمام قصيرة</h6>
+                  <p>١٦٦٫٧٥ ر.س</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-lg-4">
+              <div class="product border p-3">
+                <div class="product-img">
+                  <img src="images/products/5.jpg" class="img-fluid object-fit-cover" style="width: 100%;" alt="">
+                </div>
+                <div class="py-3 text-center">
+                  <button class="btn btn-warning px-4 px-xlg-5">إضافة للسلة</button>
+                  <button class="btn btn-light">
+                    <i class="fa-solid fa-heart"></i>
+                  </button>
+                </div>
+                <div class="text-center">
+                  <h6>تي شيرت رجالي من Gildan مصنوع من القطن بأكمام طويلة</h6>
+                  <p>١٥٤٫١٠ ر.س</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-lg-4">
+              <div class="product border p-3">
+                <div class="product-img">
+                  <img src="images/products/6.jpg" class="img-fluid object-fit-cover" style="width: 100%;" alt="">
+                </div>
+                <div class="py-3 text-center">
+                  <button class="btn btn-warning px-4 px-xlg-5">إضافة للسلة</button>
+                  <button class="btn btn-light">
+                    <i class="fa-solid fa-heart"></i>
+                  </button>
+                </div>
+                <div class="text-center">
+                  <h6>قميص Hanes الرجالي ذو الأكمام الطويلة</h6>
+                  <p>٢٦٧٫٩٥ ر.س</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-lg-4">
+              <div class="product border p-3">
+                <div class="product-img">
+                  <img src="images/products/4.jpg" class="img-fluid object-fit-cover" style="width: 100%;" alt="">
+                </div>
+                <div class="py-3 text-center">
+                  <button class="btn btn-warning px-4 px-xlg-5">إضافة للسلة</button>
+                  <button class="btn btn-light">
+                    <i class="fa-solid fa-heart"></i>
+                  </button>
+                </div>
+                <div class="text-center">
+                  <h6>جاكيت بني رجالي</h6>
+                  <p>٢٣٠ ر.س</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-lg-4">
+              <div class="product border p-3">
+                <div class="product-img">
+                  <img src="images/products/8.jpg" class="img-fluid object-fit-cover" style="width: 100%;" alt="">
+                </div>
+                <div class="py-3 text-center">
+                  <button class="btn btn-warning px-4 px-xlg-5">إضافة للسلة</button>
+                  <button class="btn btn-light">
+                    <i class="fa-solid fa-heart"></i>
+                  </button>
+                </div>
+                <div class="text-center">
+                  <h6>سترة ريبوك الرجالية - معطف منتفخ خفيف الوزن ومبطن - سترة شتوية دافئة للرجال</h6>
+                  <p>٥٢٤٫٤٠ ر.س</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section class="py-5">
+        <div class="container">
+          <div class="swiper reviews">
+            <div class="swiper-wrapper mb-2">
+              <div class="swiper-slide ms-3">
+                <div class="card h-100">
+                  <div class="card-body d-flex flex-column justify-content-between">
+                    <div>
+                      <div class="d-flex justify-content-start mb-2">
+                        <div class="text-warning">
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                        </div>
+                      </div>
+                      <p class="card-text lead mb-4">منتجات ذات جودة عالية، أسعار معقولة ، توصيل سريع وودي. أنا أوصي به
+                        بشدة.</p>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <img src="images/khaled.webp" alt="خالد الكثيري" class="rounded-circle"
+                        style="width: 40px; height: 40px; object-fit: cover;">
+                      <h6 class="mb-0 me-2 text-muted">خالد الكثيري</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide ms-3">
+                <div class="card h-100">
+                  <div class="card-body d-flex flex-column justify-content-between">
+                    <div>
+                      <div class="d-flex justify-content-start mb-2">
+                        <div class="text-warning">
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                        </div>
+                      </div>
+                      <p class="card-text lead mb-4">منتجات ذات جودة عالية، أسعار معقولة ، توصيل سريع وودي. أنا أوصي به
+                        بشدة.</p>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <img src="images/khaled.webp" alt="خالد الكثيري" class="rounded-circle"
+                        style="width: 40px; height: 40px; object-fit: cover;">
+                      <h6 class="mb-0 me-2 text-muted">خالد الكثيري</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide ms-3">
+                <div class="card h-100">
+                  <div class="card-body d-flex flex-column justify-content-between">
+                    <div>
+                      <div class="d-flex justify-content-start mb-2">
+                        <div class="text-warning">
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                        </div>
+                      </div>
+                      <p class="card-text lead mb-4">منتجات ذات جودة عالية، أسعار معقولة ، توصيل سريع وودي. أنا أوصي به
+                        بشدة.</p>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <img src="images/khaled.webp" alt="خالد الكثيري" class="rounded-circle"
+                        style="width: 40px; height: 40px; object-fit: cover;">
+                      <h6 class="mb-0 me-2 text-muted">خالد الكثيري</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide ms-3">
+                <div class="card h-100">
+                  <div class="card-body d-flex flex-column justify-content-between">
+                    <div>
+                      <div class="d-flex justify-content-start mb-2">
+                        <div class="text-warning">
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                        </div>
+                      </div>
+                      <p class="card-text lead mb-4">منتجات ذات جودة عالية، أسعار معقولة ، توصيل سريع وودي. أنا أوصي به
+                        بشدة.</p>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <img src="images/khaled.webp" alt="خالد الكثيري" class="rounded-circle"
+                        style="width: 40px; height: 40px; object-fit: cover;">
+                      <h6 class="mb-0 me-2 text-muted">خالد الكثيري</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide ms-3">
+                <div class="card h-100">
+                  <div class="card-body d-flex flex-column justify-content-between">
+                    <div>
+                      <div class="d-flex justify-content-start mb-2">
+                        <div class="text-warning">
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                        </div>
+                      </div>
+                      <p class="card-text lead mb-4">منتجات ذات جودة عالية، أسعار معقولة ، توصيل سريع وودي. أنا أوصي به
+                        بشدة.</p>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <img src="images/khaled.webp" alt="خالد الكثيري" class="rounded-circle"
+                        style="width: 40px; height: 40px; object-fit: cover;">
+                      <h6 class="mb-0 me-2 text-muted">خالد الكثيري</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide ms-3">
+                <div class="card h-100">
+                  <div class="card-body d-flex flex-column justify-content-between">
+                    <div>
+                      <div class="d-flex justify-content-start mb-2">
+                        <div class="text-warning">
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                        </div>
+                      </div>
+                      <p class="card-text lead mb-4">منتجات ذات جودة عالية، أسعار معقولة ، توصيل سريع وودي. أنا أوصي به
+                        بشدة.</p>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <img src="images/khaled.webp" alt="خالد الكثيري" class="rounded-circle"
+                        style="width: 40px; height: 40px; object-fit: cover;">
+                      <h6 class="mb-0 me-2 text-muted">خالد الكثيري</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide ms-3">
+                <div class="card h-100">
+                  <div class="card-body d-flex flex-column justify-content-between">
+                    <div>
+                      <div class="d-flex justify-content-start mb-2">
+                        <div class="text-warning">
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                        </div>
+                      </div>
+                      <p class="card-text lead mb-4">منتجات ذات جودة عالية، أسعار معقولة ، توصيل سريع وودي. أنا أوصي به
+                        بشدة.</p>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <img src="images/khaled.webp" alt="خالد الكثيري" class="rounded-circle"
+                        style="width: 40px; height: 40px; object-fit: cover;">
+                      <h6 class="mb-0 me-2 text-muted">خالد الكثيري</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide ms-3">
+                <div class="card h-100">
+                  <div class="card-body d-flex flex-column justify-content-between">
+                    <div>
+                      <div class="d-flex justify-content-start mb-2">
+                        <div class="text-warning">
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                        </div>
+                      </div>
+                      <p class="card-text lead mb-4">منتجات ذات جودة عالية، أسعار معقولة ، توصيل سريع وودي. أنا أوصي به
+                        بشدة.</p>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <img src="images/khaled.webp" alt="خالد الكثيري" class="rounded-circle"
+                        style="width: 40px; height: 40px; object-fit: cover;">
+                      <h6 class="mb-0 me-2 text-muted">خالد الكثيري</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide ms-3">
+                <div class="card h-100">
+                  <div class="card-body d-flex flex-column justify-content-between">
+                    <div>
+                      <div class="d-flex justify-content-start mb-2">
+                        <div class="text-warning">
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                        </div>
+                      </div>
+                      <p class="card-text lead mb-4">منتجات ذات جودة عالية، أسعار معقولة ، توصيل سريع وودي. أنا أوصي به
+                        بشدة.</p>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <img src="images/khaled.webp" alt="خالد الكثيري" class="rounded-circle"
+                        style="width: 40px; height: 40px; object-fit: cover;">
+                      <h6 class="mb-0 me-2 text-muted">خالد الكثيري</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-scrollbar"></div>
+          </div>
+        </div>
+      </section>
+   
+   
+    </div>
+    
+  </main>
+
+  <footer class="bg-dark text-light py-5">
+    <div class="container">
+      <div class="row justify-content-center mb-4">
+        <div class="col-auto">
+          <a class="navbar-brand" href="#">
+            <img class="img-fluid" width="100" height="100" src="images/brand.png" alt="متجر تجريبي">
+            <h1 class="visually-hidden">متجر تجريبي</h1>
+          </a>
+        </div>
+      </div>
+      <div class="row justify-content-center mb-4">
+        <div class="col-md-6 text-center">
+          <div class="mb-4">
+            <a href="#" class="text-light text-decoration-none mx-2">المدونة</a>
+            <a href="#" class="text-light text-decoration-none mx-2">سياسية الاستخدام والخصوصية</a>
+            <a href="#" class="text-light text-decoration-none mx-2">سياسية الاستبدال والاسترجاع</a>
+          </div>
+          <hr class="border-secondary">
+          <div class="mb-2">
+            <a href="#" class="text-light mx-2" title="سناب شات">
+              <i class="fab fa-snapchat fa-lg"></i>
+            </a>
+            <a href="#" class="text-light mx-2" title="تيك توك">
+              <i class="fab fa-tiktok fa-lg"></i>
+            </a>
+            <a href="#" class="text-light mx-2" title="فيسبوك">
+              <i class="fab fa-facebook fa-lg"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="text-center justify-content-center mb-3">
+        <a href="tel:8001111210" class="text-light text-decoration-none">
+          <i class="fas fa-phone-alt me-2"></i>
+          <span>8001111210</span>
+        </a>
+      </div>
+      <hr class="border-secondary">
+      <div class="text-center mb-3 mb-md-0">
+        <p class="small text-light mb-0">
+          صنع بإتقان على | 2024
+          <a href="#" class="text-light text-decoration-none" target="_blank">منصة سلة</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var reviews = new Swiper(".reviews", {
+      slidesPerView: 6,
+      scrollbar: {
+        el: ".swiper-scrollbar",
+        hide: true,
+      },
+      breakpoints: {
+        // when window width is >= 320px
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 10
+        },
+        // when window width is >= 480px
+        480: {
+          slidesPerView: 2,
+          spaceBetween: 10
+        },
+        // when window width is >= 480px
+        776: {
+          slidesPerView: 3,
+          spaceBetween: 10
+        },
+        // when window width is >= 924px
+        924: {
+          slidesPerView: 4,
+          spaceBetween: 10
+        },
+        // when window width is >= 1140px
+        1320: {
+          slidesPerView: 5,
+          spaceBetween: 10
+        }
+      }
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <title>منتجات حصرية - زهرة الحياة</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- FontAwesome for Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Owl Carousel CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+  <style>
+    :root {
+      --primary-color: #bc8a7e;
+      --primary-hover: #a76e5e;
+      --secondary-color: #bc8a7e;
+      --secondary-hover: #a76e5e;
+      --background-color: #f0f2f5;
+      --card-background: #fff;
+      --text-color: #333;
+      --text-secondary: #bc8a7e;
+      --promotion-bg: #e63946;
+      --promotion-text: #fff;
+      --button-bg: #bc8a7e;
+      --button-hover: #a76e5e;
+      --disabled-bg: #d3d3d3;
+      --disabled-text: #666;
+    }
+
+    body {
+      font-family: 'Cairo', sans-serif;
+      background-color: var(--background-color);
+      color: var(--text-color);
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Custom Container */
+    .custom-container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 0;
+    }
+
+    .section12-s-block--best-offers {
+      background-color: var(--card-background);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      position: relative;
+    }
+
+    .section12-s-slider-block__title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+
+    .section12-s-slider-block__title-right h2 {
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--text-color);
+    }
+
+    .section12-s-slider-block__navigation {
+      display: flex;
+      gap: 10px;
+    }
+
+    .section12-custom-prev,
+    .section12-custom-next {
+      background: rgba(255, 255, 255, 0.9);
+      border: none;
+      font-size: 16px;
+      color: var(--secondary-color);
+      transition: color 0.3s ease, transform 0.3s ease, background 0.3s ease;
+      cursor: pointer;
+      padding: 6px 8px;
+      border-radius: 50%;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .section12-custom-prev:hover,
+    .section12-custom-next:hover {
+      color: var(--secondary-hover);
+      transform: scale(1.1);
+      background: rgba(255, 255, 255, 1);
+    }
+
+    .section12-s-products-slider-card {
+      background-color: var(--card-background);
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .section12-s-products-slider-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    .section12-s-product-card-image {
+      position: relative;
+      width: 100%;
+      padding-top: 100%;
+      background-color: #f9f9f9;
+    }
+
+    .section12-s-product-card-image img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .section12-s-products-slider-card:hover img {
+      transform: scale(1.05);
+    }
+
+    .section12-s-product-card-promotion-title {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: var(--promotion-bg);
+      color: var(--promotion-text);
+      padding: 6px 12px;
+      border-radius: 5px;
+      font-size: 12px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    .section12-s-product-card-content {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 200px;
+    }
+
+    .section12-s-product-card-content-main h3 {
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--text-color);
+      margin-bottom: 10px;
+    }
+
+    .section12-s-product-card-content-sub h4 {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text-color);
+    }
+
+    .section12-s-button-element {
+      border-radius: 5px;
+      font-size: 16px;
+      font-weight: 600;
+      color: #fff;
+      background-color: var(--button-bg);
+      border: none;
+      padding: 12px 20px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .section12-s-button-element:hover {
+      background-color: var(--button-hover);
+      transform: translateY(-2px);
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+      .section12-s-slider-block__title-right h2 {
+        font-size: 22px;
+      }
+
+      .section12-s-button-element {
+        padding: 10px 16px;
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- <section class="custom-container">
+        <div class="section12-s-block--best-offers">
+            <div class="section12-s-slider-block__title">
+                <div class="section12-s-slider-block__title-right">
+                    <h2>منتجات حصرية</h2>
+                </div>
+                <div class="section12-s-slider-block__navigation">
+                    <button class="section12-custom-prev" aria-label="السلايد السابق">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                    <button class="section12-custom-next" aria-label="السلايد التالي">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="section12-s-slider-container owl-carousel section12-owl-carousel">
+                <div class="section12-s-products-slider-card" role="group" aria-label="1 / 4">
+                    <div class="section12-s-product-card-image">
+                        <a href="#"><img class="section12-s-product-card-image-cover lazyload"
+                                data-src="https://via.placeholder.com/500" alt="Product Image" /></a>
+                    </div>
+                    <div class="section12-s-product-card-content">
+                        <div class="section12-s-product-card-content-main">
+                            <h3 class="section12-s-product-card-content-title">
+                                <a href="#">Product Name</a>
+                            </h3>
+                        </div>
+                        <div class="section12-s-product-card-content-sub">
+                            <h4 class="section12-s-product-card-price">١٤٩ ر.س</h4>
+                        </div>
+                        <div class="section12-s-product-card-content-footer">
+                            <button class="section12-s-button-element">
+                                <i class="fas fa-shopping-bag"></i> إضافة للسلة
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <section class="bg-white py-5">
+      <div class="container">
+        <div>
+          <div  id="owl-example" class="owl-carousel mb-2">
+            <div class=" ms-3">
+              <div class="card h-100">
+                <div class="card-body d-flex flex-column justify-content-between">
+                  <div>
+                    <div class="d-flex justify-content-start mb-2">
+                      <div class="text-warning">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                      </div>
+                    </div>
+                    <p class="card-text lead mb-4">منتجات ذات جودة عالية، أسعار معقولة ، توصيل سريع وودي. أنا أوصي به
+                      بشدة.</p>
+                  </div>
+                  <div class="d-flex align-items-center">
+                    <img src="images/khaled.webp" alt="خالد الكثيري" class="rounded-circle"
+                      style="width: 40px; height: 40px; object-fit: cover;">
+                    <h6 class="mb-0 me-2 text-muted">خالد الكثيري</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class=" ms-3">
+              <div class="card h-100">
+                <div class="card-body d-flex flex-column justify-content-between">
+                  <div>
+                    <div class="d-flex justify-content-start mb-2">
+                      <div class="text-warning">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                      </div>
+                    </div>
+                    <p class="card-text lead mb-4">منتجات ذات جودة عالية، أسعار معقولة ، توصيل سريع وودي. أنا أوصي به
+                      بشدة.</p>
+                  </div>
+                  <div class="d-flex align-items-center">
+                    <img src="images/khaled.webp" alt="خالد الكثيري" class="rounded-circle"
+                      style="width: 40px; height: 40px; object-fit: cover;">
+                    <h6 class="mb-0 me-2 text-muted">خالد الكثيري</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class=" ms-3">
+              <div class="card h-100">
+                <div class="card-body d-flex flex-column justify-content-between">
+                  <div>
+                    <div class="d-flex justify-content-start mb-2">
+                      <div class="text-warning">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                      </div>
+                    </div>
+                    <p class="card-text lead mb-4">منتجات ذات جودة عالية، أسعار معقولة ، توصيل سريع وودي. أنا أوصي به
+                      بشدة.</p>
+                  </div>
+                  <div class="d-flex align-items-center">
+                    <img src="images/khaled.webp" alt="خالد الكثيري" class="rounded-circle"
+                      style="width: 40px; height: 40px; object-fit: cover;">
+                    <h6 class="mb-0 me-2 text-muted">خالد الكثيري</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class=" ms-3">
+              <div class="card h-100">
+                <div class="card-body d-flex flex-column justify-content-between">
+                  <div>
+                    <div class="d-flex justify-content-start mb-2">
+                      <div class="text-warning">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                      </div>
+                    </div>
+                    <p class="card-text lead mb-4">منتجات ذات جودة عالية، أسعار معقولة ، توصيل سريع وودي. أنا أوصي به
+                      بشدة.</p>
+                  </div>
+                  <div class="d-flex align-items-center">
+                    <img src="images/khaled.webp" alt="خالد الكثيري" class="rounded-circle"
+                      style="width: 40px; height: 40px; object-fit: cover;">
+                    <h6 class="mb-0 me-2 text-muted">خالد الكثيري</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class=" ms-3">
+              <div class="card h-100">
+                <div class="card-body d-flex flex-column justify-content-between">
+                  <div>
+                    <div class="d-flex justify-content-start mb-2">
+                      <div class="text-warning">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                      </div>
+                    </div>
+                    <p class="card-text lead mb-4">منتجات ذات جودة عالية، أسعار معقولة ، توصيل سريع وودي. أنا أوصي به
+                      بشدة.</p>
+                  </div>
+                  <div class="d-flex align-items-center">
+                    <img src="images/khaled.webp" alt="خالد الكثيري" class="rounded-circle"
+                      style="width: 40px; height: 40px; object-fit: cover;">
+                    <h6 class="mb-0 me-2 text-muted">خالد الكثيري</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class=" ms-3">
+              <div class="card h-100">
+                <div class="card-body d-flex flex-column justify-content-between">
+                  <div>
+                    <div class="d-flex justify-content-start mb-2">
+                      <div class="text-warning">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                      </div>
+                    </div>
+                    <p class="card-text lead mb-4">منتجات ذات جودة عالية، أسعار معقولة ، توصيل سريع وودي. أنا أوصي به
+                      بشدة.</p>
+                  </div>
+                  <div class="d-flex align-items-center">
+                    <img src="images/khaled.webp" alt="خالد الكثيري" class="rounded-circle"
+                      style="width: 40px; height: 40px; object-fit: cover;">
+                    <h6 class="mb-0 me-2 text-muted">خالد الكثيري</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class=" ms-3">
+              <div class="card h-100">
+                <div class="card-body d-flex flex-column justify-content-between">
+                  <div>
+                    <div class="d-flex justify-content-start mb-2">
+                      <div class="text-warning">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                      </div>
+                    </div>
+                    <p class="card-text lead mb-4">منتجات ذات جودة عالية، أسعار معقولة ، توصيل سريع وودي. أنا أوصي به
+                      بشدة.</p>
+                  </div>
+                  <div class="d-flex align-items-center">
+                    <img src="images/khaled.webp" alt="خالد الكثيري" class="rounded-circle"
+                      style="width: 40px; height: 40px; object-fit: cover;">
+                    <h6 class="mb-0 me-2 text-muted">خالد الكثيري</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class=" ms-3">
+              <div class="card h-100">
+                <div class="card-body d-flex flex-column justify-content-between">
+                  <div>
+                    <div class="d-flex justify-content-start mb-2">
+                      <div class="text-warning">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                      </div>
+                    </div>
+                    <p class="card-text lead mb-4">منتجات ذات جودة عالية، أسعار معقولة ، توصيل سريع وودي. أنا أوصي به
+                      بشدة.</p>
+                  </div>
+                  <div class="d-flex align-items-center">
+                    <img src="images/khaled.webp" alt="خالد الكثيري" class="rounded-circle"
+                      style="width: 40px; height: 40px; object-fit: cover;">
+                    <h6 class="mb-0 me-2 text-muted">خالد الكثيري</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class=" ms-3">
+              <div class="card h-100">
+                <div class="card-body d-flex flex-column justify-content-between">
+                  <div>
+                    <div class="d-flex justify-content-start mb-2">
+                      <div class="text-warning">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                      </div>
+                    </div>
+                    <p class="card-text lead mb-4">منتجات ذات جودة عالية، أسعار معقولة ، توصيل سريع وودي. أنا أوصي به
+                      بشدة.</p>
+                  </div>
+                  <div class="d-flex align-items-center">
+                    <img src="images/khaled.webp" alt="خالد الكثيري" class="rounded-circle"
+                      style="width: 40px; height: 40px; object-fit: cover;">
+                    <h6 class="mb-0 me-2 text-muted">خالد الكثيري</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+       
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script>
+    // $(document).ready(function () {
+    //     var section12Owl = $(".section12-owl-carousel").owlCarousel({
+    //         items: 4,
+    //         loop: true,
+    //         margin: 20,
+    //         nav: false,
+    //         dots: false,
+    //         autoplay: true,
+    //         autoplayTimeout: 5000,
+    //         autoplayHoverPause: true,
+    //         rtl: true,
+    //         responsive: {
+    //             0: { items: 1 },
+    //             576: { items: 2 },
+    //             768: { items: 3 },
+    //             992: { items: 4 }
+    //         }
+    //     });
+
+    //     $(".section12-custom-prev").click(function () {
+    //         section12Owl.trigger('prev.owl.carousel');
+    //     });
+
+    //     $(".section12-custom-next").click(function () {
+    //         section12Owl.trigger('next.owl.carousel');
+    //     });
+    // });
+
+
+    $(document).ready(function () {
+      $("#owl-example").owlCarousel();
+    });
+  </script>
+</body>
+
+</html>
